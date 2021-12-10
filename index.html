@@ -1,0 +1,55 @@
+<!-- !DOCTYPE: Document Type Definition (文書型宣言) - 文書がHTML5で作成されたものであることを宣言するためのやつ -->
+<!DOCTYPE html>
+
+<!-- html: HTML文書であることを指定するタグ
+https://html-coding.co.jp/annex/dictionary/html/html/ -->
+
+<!-- lang: 言語属性、最近使われなくなってきた？自動翻訳に役立つ -->
+<html lang="en">
+
+<!-- head: 文書のヘッダ部分を指定するタグ、<html>タグのあと、<body>タグの前に書く
+https://html-coding.co.jp/annex/dictionary/html/head/ -->
+<head>
+
+    <!-- meta: META-information の略で、文書のメタ情報を指定し、ブラウザや検索ロボットにホームページの情報を知らせるためのタグ -->
+    <!-- メタ情報は、サイトの制作者や文書の説明・キーワードなどの情報や文字コードの指定、キャッシュの制御と有効期限の指定などを記載するのが一般的です。これらの情報はname属性で種類を、 content属性でその内容を指定します。 -->
+    <!-- https://html-coding.co.jp/annex/dictionary/html/meta/ -->
+  
+    <!-- HTML の <meta> 要素は、他のメタ関連要素 (<base>, <link>, <script>, <style>, <title>) で表すことができない任意のメタデータを提示します。-->
+    <!-- https://developer.mozilla.org/ja/docs/Web/HTML/Element/meta -->
+
+    <!-- charset: 文字コード指定 -->
+    <meta charset="UTF-8">
+
+    <!-- http-equiv: http-equiv 属性が指定されると、その meta 要素はプラグマ指示子となります。プラグマ指示子はプラグマ （ユーザエージェントへの指示） を指定するための名前のことです。該当文書の処理の仕方や扱いを指定することができます。 -->
+    <!-- http-equiv="content-type" を指定した meta 要素に content="text/html; charset=utf-8" のようにあわせて指定することで文書の文字コードを指定することができます。この指定は、HTML 4.01 などでも用いられた方法です。 -->
+
+    <!-- X-UA-Compatible: バージョン8.0以降のInternet Explorerで使用できる互換モードと呼ばれる機能。IEを「X-UA-Compatible」で指定した互換モードで表示させることができます。
+    content="IE=edge": Internet explorer であれば最新のバージョンで表示することを伝えている。 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">: どうやらこれは HTML ファイルを表示する際の画面サイズを決定している模様。viewport が仮想的なウインドウ、content がそのウインドウのサイズを指定する。
+    https://qiita.com/ryounagaoka/items/045b2808a5ed43f96607 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Simple Website</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <!-- h1: Heading - 見出し(数字は大きさ見出しの大きさ、h1 から h6 まであり) -->
+    <!-- https://html-coding.co.jp/annex/dictionary/html/hx/ -->
+    <h1>Task List</h1>
+
+    <!-- p: Paragraph - 段落。<p>～</p>で囲まれたテキストは1つの段落である。 -->
+    <!-- https://html-coding.co.jp/annex/dictionary/html/p/ -->
+    <p id="msg">Current tasks:</p>
+
+    <!-- ul: unordered list - 箇条書きリスト -->
+    <ul>
+        <li class="list">Add visual styles</li>
+        <li class="list">Add light and dark themes</li>
+        <li>Enable swithcing the theme</li>
+    </ul>
+</body>
+</html>
