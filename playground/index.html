@@ -36,52 +36,68 @@ https://html-coding.co.jp/annex/dictionary/html/head/ -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <title>Simple Website</title>
+    <title>Playground - Simple Website</title>
     <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
-    <!-- h1: Heading - 見出し(数字は大きさ見出しの大きさ、h1 から h6 まであり) -->
-    <!-- https://html-coding.co.jp/annex/dictionary/html/hx/ -->
-    <h1>Task List</h1>
+    <!-- 色々やってみるゾーン -->
+    <h1>&lt;編集中&gt;Playground for HTML (色々やってみるゾーン)</h1>
+    <h4>箇条書きリスト &lt;ol&gt; ←このタグ自体は予約文字 &lt;&gt; を使用するためエスケープ処理を行う。 &amp;lt;ol&amp;gt; と入力する事で表示可能</h4>
 
-    <!-- p: Paragraph - 段落。<p>～</p>で囲まれたテキストは1つの段落である。 -->
-    <!-- https://html-coding.co.jp/annex/dictionary/html/p/ -->
-    <p id="msg">Current tasks:</p>
+    <!-- <参考> ol: ordered list - 順序のあるリスト。 -->
+    <!-- https://html-coding.co.jp/annex/dictionary/html/ol/ -->
+    <ol>
+        <li>&lt;ol&gt; の中では特にリストに何も指定しなければアラビア数字となる</li>
+        <li type="disc">type="disc" とすると黒丸アイコン</li>
+        <li type="circle">type="circle" とすると白丸アイコン</li>
+        <li type="sqare">type="sqare" とすると四角アイコン</li>
+        <li type="1">type="1" としてもアラビア数字</li>
+        <li type="A">type="A" とするとローマ字大文字</li>
+        <li type="a">type="a" とするとローマ字小文字</li>
+        <li type="I">type="I" とするとローマ数字</li>
+        <li>ここで再び何も指定しなければカウントされたアラビア数字の順番で表示</li>
+        <li>ここで再び何も指定しなければカウントされたアラビア数字の順番で表示</li>
+        <li>&lt;ol&gt; の &lt;type="disc"&gt; は &lt;ul&gt; の何も指定しないものと見た目上同じ？(内部的にはカウントされているので別物)</li>
+    </ol>
 
-    <!-- ul: unordered list - 箇条書きリスト -->
-    <!-- https://html-coding.co.jp/annex/dictionary/html/ul/ -->
+    <h4>箇条書きリスト &lt;ul&gt; </h4>
     <ul>
-
-        <!-- li: list item - リストの項目を表示するために使用するタグ。 -->
-        <!-- https://html-coding.co.jp/annex/dictionary/html/li/ -->
-        <li class="list">Add visual styles</li>
-        <li class="list">Add light and dark themes</li>
-        <li>Enable swithcing the theme</li>
+        <li>1 つ目</li>
+        <li>2 つ目</li>
+        <li type="1">&lt;li type=1&gt; としてみた。この行から分かる通り、&lt;ul&gt; でも内部的にはカウントされている模様</li>
     </ul>
 
-    <br>
+    <h4>テキストボックスとフォーム</h4>
+    <!-- form: 入力・送信フォームを作成する際に使用する要素。 -->
 
-    <!-- a: Anchor（アンカー）- リンクの出発点や到達点を指定するタグ。 -->
-    <!-- <a href="http://sample.htm">サンプルサイトへ飛びます。</a> のように記述する -->
-    <!-- https://html-coding.co.jp/annex/dictionary/html/a/ -->
+    <!-- <form method="POST" action="sample.php">
+        <p>お名前: <input type="text" name="NAME" value=""></p>
+        <p>メールアドレス: <input type="text" name="EMAIL" value=""></p>
+        <p><input type="reset" value="リセット"> <input type="submit" value="送信する"></p>
+    </form> -->
+
+    <form action="action.php" method="post">
+        名前: <input type="text" name="name" />
+        年齢: <input type="text" name="age" />
+        <input type="submit" />
+    </form>
+
+
+
     <p>
         リンク集:
     <ul>
-        <li><a href="./playground/index.html" target="_blank" rel="noopener noreferrer">Haru playground (HTML)</a></li>
-        <li><a href="https://github.com/tokawata/SimpleWebsite/blob/dev/index.html" target="_blank"
+        <li><a href="./playground/index.html" target="_blank" rel="noopener noreferrer">Haru playground (HTML)</a>
+        </li>
+        <li><a href="https://github.com/tokawata/SimpleWebsite/blob/dev/playground/index.html" target="_blank"
                 rel="noopener noreferrer">このページのオリジナルソース (GitHub)</a></li>
     </ul>
     </p>
 
-    <p>
-        参考ページ:
-    <ul>
-        <li> <a href="https://docs.microsoft.com/ja-jp/learn/modules/build-simple-website/" target="_blank"
-                rel="noopener noreferrer">https://docs.microsoft.com/ja-jp/learn/modules/build-simple-website/</a>
-        </li>
-    </ul>
-    </p>
+    参考ページ:
+    <a href="https://html-coding.co.jp/annex/dictionary/html/" target="_blank"
+        rel="noopener noreferrer">https://html-coding.co.jp/annex/dictionary/html/</a>
 
 </body>
 
