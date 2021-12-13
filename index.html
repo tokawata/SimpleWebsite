@@ -9,12 +9,13 @@ https://html-coding.co.jp/annex/dictionary/html/html/ -->
 
 <!-- head: 文書のヘッダ部分を指定するタグ、<html>タグのあと、<body>タグの前に書く
 https://html-coding.co.jp/annex/dictionary/html/head/ -->
+
 <head>
 
     <!-- meta: META-information の略で、文書のメタ情報を指定し、ブラウザや検索ロボットにホームページの情報を知らせるためのタグ -->
     <!-- メタ情報は、サイトの制作者や文書の説明・キーワードなどの情報や文字コードの指定、キャッシュの制御と有効期限の指定などを記載するのが一般的です。これらの情報はname属性で種類を、 content属性でその内容を指定します。 -->
     <!-- https://html-coding.co.jp/annex/dictionary/html/meta/ -->
-  
+
     <!-- HTML の <meta> 要素は、他のメタ関連要素 (<base>, <link>, <script>, <style>, <title>) で表すことができない任意のメタデータを提示します。-->
     <!-- https://developer.mozilla.org/ja/docs/Web/HTML/Element/meta -->
 
@@ -36,6 +37,7 @@ https://html-coding.co.jp/annex/dictionary/html/head/ -->
     <title>Simple Website</title>
     <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
     <!-- h1: Heading - 見出し(数字は大きさ見出しの大きさ、h1 から h6 まであり) -->
     <!-- https://html-coding.co.jp/annex/dictionary/html/hx/ -->
@@ -46,10 +48,62 @@ https://html-coding.co.jp/annex/dictionary/html/head/ -->
     <p id="msg">Current tasks:</p>
 
     <!-- ul: unordered list - 箇条書きリスト -->
+    <!-- https://html-coding.co.jp/annex/dictionary/html/ul/ -->
     <ul>
+
+        <!-- li: list item - リストの項目を表示するために使用するタグ。 -->
+        <!-- https://html-coding.co.jp/annex/dictionary/html/li/ -->
         <li class="list">Add visual styles</li>
         <li class="list">Add light and dark themes</li>
         <li>Enable swithcing the theme</li>
     </ul>
+
+    <br>
+
+    <!-- 色々やってみるゾーン -->
+    <h3>My playground for HTML (色々やってみるゾーン)</h3>
+    <h4>箇条書きリスト &lt;ol&gt; ←このタグ自体は予約文字 &lt;&gt; を使用するためエスケープ処理を行う。 &amp;lt;ol&amp;gt; と入力する事で表示可能</h4>
+
+    <!-- <参考> ol: ordered list - 順序のあるリスト。 -->
+    <!-- https://html-coding.co.jp/annex/dictionary/html/ol/ -->
+    <ol>
+        <li>&lt;ol&gt; の中では特にリストに何も指定しなければアラビア数字となる</li>
+        <li type="disc">type="disc" とすると黒丸アイコン</li>
+        <li type="circle">type="circle" とすると白丸アイコン</li>
+        <li type="sqare">type="sqare" とすると四角アイコン</li>
+        <li type="1">type="1" としてもアラビア数字</li>
+        <li type="A">type="A" とするとローマ字大文字</li>
+        <li type="a">type="a" とするとローマ字小文字</li>
+        <li type="I">type="I" とするとローマ数字</li>
+        <li>ここで再び何も指定しなければカウントされたアラビア数字の順番で表示</li>
+        <li>ここで再び何も指定しなければカウントされたアラビア数字の順番で表示</li>
+        <li>&lt;ol&gt; の &lt;type="disc"&gt; は &lt;ul&gt; の何も指定しないものと見た目上同じ？(内部的にはカウントされているので別物)</li>
+    </ol>
+
+    <h4>箇条書きリスト &lt;ul&gt; </h4>
+    <ul>
+        <li>1 つ目</li>
+        <li>2 つ目</li>
+        <li type="1">&lt;li type=1&gt; としてみた。この行から分かる通り、&lt;ul&gt; でも内部的にはカウントされている模様</li>
+    </ul>
+
+    <h4>テキストボックス</h4>
+
+    <form method="post" action="sample.cgi">
+        <textarea name="kansou" rows="4" cols="40">感想を記入します。</textarea><br>
+        <input type="submit" value="送信">
+    </form>
+
+    <br>
+    <br>
+    <br>
+
+    <!-- a: Anchor（アンカー）- リンクの出発点や到達点を指定するタグ。 -->
+    <!-- <a href="http://sample.htm">サンプルサイトへ飛びます。</a> のように記述する -->
+    <!-- https://html-coding.co.jp/annex/dictionary/html/a/ -->
+    参考ページ: 
+    <a href="https://docs.microsoft.com/ja-jp/learn/modules/build-simple-website/">https://docs.microsoft.com/ja-jp/learn/modules/build-simple-website/</a>
+    
 </body>
+
 </html>
